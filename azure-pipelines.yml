@@ -1,19 +1,41 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
 trigger:
 - master
+jobs:
+- job: 'Perl Module'
+  pool:
+    vmImage: 'Ubuntu-16.04'
+  strategy:
+    matrix:
+      Perl58:
+        perl.version: '5.8'
+      Perl510:
+        perl.version: '5.10'
+      perl512:
+        perl.version: '5.12'
+      perl514:
+        perl.version: '5.14'
+      Perl516:
+        perl.version: '5.16'
+      perl518:
+        perl.version: '5.18'
+      perl520:
+        perl.version: '5.20'
+      perl522:
+        perl.version: '5.22'
+      perl524:
+        perl.version: '5.24'
+      Perl526:
+        perl.version: '5.26'
+      perl528:
+        perl.version: '5.28'
+      perl530:
+        perl.version: '5.30'
+    maxParallel: 4
 
-pool:
-  vmImage: 'Ubuntu-16.04'
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+  steps:
+  - task: UsePerlVersion@0
+    inputs:
+      versionSpec: '$(perl.version)'
+      architecture: 'x64'
+  - script: echo Hello, world!
+    displayName: 'Run a one-line script'
