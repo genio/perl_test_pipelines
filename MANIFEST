@@ -1,0 +1,15 @@
+.mailmap
+Changes
+lib/Perl/Test.pm
+Makefile.PL
+MANIFEST
+MANIFEST.SKIP
+META.json			Module meta-data (added by MakeMaker)
+README.md
+t/00-report-prereqs.t
+xt/author/00-compile.t
+xt/author/eol.t
+xt/author/pod-spell.t
+xt/author/pod-syntax.t
+xt/author/pod_coverage.t
+xt/author/test-version.t

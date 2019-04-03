@@ -1,0 +1,4 @@
+Revision history Perl::Test
+
+0.000001     2019-04-03
+  - Attempting to create a CI environment for Perl in Azure Pipelines

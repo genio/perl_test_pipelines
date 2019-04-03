@@ -1,0 +1,11 @@
+^\.git
+^blib/
+TODO
+Makefile$
+\.bak$
+^extras/
+pm_to_blib
+\.lock$
+^cover_db/
+^Perl-Test
+^MYMETA\.
