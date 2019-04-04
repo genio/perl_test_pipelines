@@ -1,7 +1,7 @@
 trigger:
 - master
 jobs:
-- job: 'Perl Module'
+- job: 'PerlModule'
   pool:
     vmImage: 'Ubuntu-16.04'
   strategy:
